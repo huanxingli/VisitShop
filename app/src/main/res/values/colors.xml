@@ -10,4 +10,10 @@
     <color name="menu_item_white_pressed">#f3f3f3</color>
     <color name="login_btn_pressed">#9d9d9d</color>
 
+    <color name="main_tab_text">#666666</color>
+    <color name="color_bottom_layout_bg">#F2F2F2</color>
+
+    <!--MainActivity-->
+    <color name="gray_bg">#efe7e3</color>
+
 </resources>

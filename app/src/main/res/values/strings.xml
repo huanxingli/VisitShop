@@ -6,4 +6,11 @@
     <string name="loading">正在登录...</string>
     <string name="login_name_psd_failure_toast">用户名或者密码错误，登录失败</string>
     <string name="login_network_error">服务器连接异常</string>
+
+    <string name="tab_main">首页</string>
+    <string name="tab_shop">巡店</string>
+    <string name="tab_visit">拜访</string>
+    <string name="tab_train">培训</string>
+    <string name="tab_me">个人中心</string>
+
 </resources>
