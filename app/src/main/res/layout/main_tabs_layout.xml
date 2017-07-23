@@ -19,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:background="@drawable/menu_home_style" />
+            android:src="@drawable/menu_home_style" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -44,7 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:background="@drawable/menu_shop_normal" />
+            android:src="@drawable/menu_shop_normal" />
 
         <TextView
             android:layout_width="wrap_content"
