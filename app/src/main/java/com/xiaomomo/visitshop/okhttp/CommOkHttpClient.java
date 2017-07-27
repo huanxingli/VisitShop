@@ -52,6 +52,12 @@ public class CommOkHttpClient {
         return instance;
     }
 
+    /**
+     * 封装post请求
+     * @param url
+     * @param params
+     * @param callback
+     */
     public void postRequest(String url, HashMap<String,String> params, final OkHttpCallBack callback){
         final Request request = new OkHttpRequest().postRequest(url,params);
         client.newCall(request).enqueue(new Callback() {
@@ -73,6 +79,37 @@ public class CommOkHttpClient {
                     public void run() {
                         callback.onSuccess(str);
 
+                    }
+                });
+            }
+        });
+    }
+
+    /**
+     * 封装get请求
+     * @param url
+     * @param callBack
+     */
+    public void getRequest(String url, final OkHttpCallBack callBack){
+        final Request request = new OkHttpRequest().getRequest(url);
+        client.newCall(request).enqueue(new Callback() {
+            @Override
+            public void onFailure(Call call, final IOException e) {
+                handler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        callBack.onFailure(request,e);
+                    }
+                });
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                final String str = response.body().string();
+                handler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        callBack.onSuccess(str);
                     }
                 });
             }

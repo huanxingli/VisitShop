@@ -6,7 +6,7 @@ package com.xiaomomo.visitshop.utils;
  */
 
 public class HttpUrl {
-    public static final String BASE_URL = "http://192.168.0.102:8080";
+    public static final String BASE_URL = "http://192.168.0.100:8080";
 
     public static final String Login = BASE_URL + "/visitshop/login";//登录get
     public static final String FeedBack = BASE_URL + "/visitshop/feedback";//意见反馈post

@@ -32,4 +32,16 @@ public class OkHttpRequest {
                 .build();
         return request;
     }
+
+    /**
+     * 创建get请求的request
+     * @param url
+     * @return
+     */
+    public Request getRequest(String url){
+        Request request = new Request.Builder()
+                .url(url)
+                .build();
+        return request;
+    }
 }

@@ -22,4 +22,7 @@
     <dimen name="title_bar_text_size">20sp</dimen>
     <dimen name="title_bar_save_right">25dp</dimen>
     <dimen name="title_bar_save_bottom">12dp</dimen>
+
+    <dimen name="home_viewpager_hight">166dp</dimen>
+    <dimen name="viewpage_point_margin_bottom">12dp</dimen>
 </resources>
