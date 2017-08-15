@@ -16,4 +16,7 @@
     <!--MainActivity-->
     <color name="gray_bg">#efe7e3</color>
 
+    <!-- SettingFragment -->
+    <color name="item_divide">#99999999</color>
+
 </resources>

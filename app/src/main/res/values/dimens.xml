@@ -25,4 +25,10 @@
 
     <dimen name="home_viewpager_hight">166dp</dimen>
     <dimen name="viewpage_point_margin_bottom">12dp</dimen>
+
+    <!-- setting -->
+    <dimen name="setting_item_icon_left_margin">26dp</dimen>
+    <dimen name="setting_item_text_left_margin">10dp</dimen>
+    <dimen name="setting_item_right_margin">30dp</dimen>
+    <dimen name="setting_item_text_size">14sp</dimen>
 </resources>

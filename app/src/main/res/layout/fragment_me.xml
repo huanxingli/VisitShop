@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <com.xiaomomo.visitshop.view.SettingItemView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/login_background"
-        android:text="个人中心"
-        android:textSize="20sp"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        app:left_icon="@drawable/medata"
+        app:item_text="个人资料"
+        app:item_text_size="@dimen/setting_item_text_size">
+
+    </com.xiaomomo.visitshop.view.SettingItemView>
 
 </RelativeLayout>
