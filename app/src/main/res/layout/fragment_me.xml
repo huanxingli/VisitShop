@@ -3,15 +3,112 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white">
+    android:background="@color/setting_color_bg">
 
-    <com.xiaomomo.visitshop.view.SettingItemView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:left_icon="@drawable/medata"
-        app:item_text="个人资料"
-        app:item_text_size="@dimen/setting_item_text_size">
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    </com.xiaomomo.visitshop.view.SettingItemView>
+            <ImageView
+                android:layout_marginTop="@dimen/icon_margin_top"
+                android:id="@+id/imageView"
+                android:layout_width="@dimen/width_120"
+                android:layout_height="@dimen/height_120"
+                android:layout_gravity="center"
+                android:src="@drawable/defaulthead" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/user_name_text"
+                android:textSize="@dimen/setting_item_text_size"
+                android:text="张大师"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/user_text_margin_top"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="北京香山分公司 | 店长"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/user_location_text_margin_top"
+                android:textColor="@color/item_divide"/>
+
+            <com.xiaomomo.visitshop.view.SettingItemView
+                android:id="@+id/setting_me"
+                android:layout_marginTop="13dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:isShowDivide="false"
+                app:left_icon="@drawable/medata"
+                app:item_text="@string/setting_item_me"
+                app:item_text_size="@dimen/setting_item_text_size">
+            </com.xiaomomo.visitshop.view.SettingItemView>
+
+            <com.xiaomomo.visitshop.view.SettingItemView
+                android:id="@+id/setting_clear"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:isShowDivide="true"
+                app:left_icon="@drawable/clearcache"
+                app:item_text="@string/setting_item_clear"
+                app:item_text_size="@dimen/setting_item_text_size">
+            </com.xiaomomo.visitshop.view.SettingItemView>
+
+            <com.xiaomomo.visitshop.view.SettingItemView
+                android:id="@+id/setting_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:isShowDivide="true"
+                app:left_icon="@drawable/appfeedback"
+                app:item_text="@string/setting_item_idea"
+                app:item_text_size="@dimen/setting_item_text_size">
+            </com.xiaomomo.visitshop.view.SettingItemView>
+
+            <com.xiaomomo.visitshop.view.SettingItemView
+                android:id="@+id/setting_about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:isShowDivide="true"
+                app:left_icon="@drawable/about"
+                app:item_text="@string/setting_item_about"
+                app:item_text_size="@dimen/setting_item_text_size">
+            </com.xiaomomo.visitshop.view.SettingItemView>
+
+            <com.xiaomomo.visitshop.view.SettingItemView
+                android:id="@+id/setting_check"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:isShowDivide="false"
+                app:left_icon="@drawable/newversion"
+                app:item_text="@string/setting_item_check"
+                app:item_text_size="@dimen/setting_item_text_size">
+            </com.xiaomomo.visitshop.view.SettingItemView>
+
+            <com.xiaomomo.visitshop.view.SettingItemView
+                android:id="@+id/setting_exit"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:isShowDivide="false"
+                app:isShow_arrow="false"
+                app:left_icon="@drawable/appexit"
+                app:item_text="@string/setting_item_exit"
+                app:item_text_size="@dimen/setting_item_text_size">
+            </com.xiaomomo.visitshop.view.SettingItemView>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
 
 </RelativeLayout>

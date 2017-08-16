@@ -20,15 +20,19 @@ public class SettingItemView  extends RelativeLayout{
 
     private View mView;
 
+    private View rootLayout;
     private ImageView leftImageIcon;
     private TextView textView;
     private View dividerView;
+    private ImageView rightImageIcon;
 
     private Drawable mleftIcon;
     private String mText;
     private int mTextColor;
     private int mTextSize;
     private boolean isShowDivider;
+    private boolean isShowArrow;
+    private OnItemClick onItemClick;
 
     public SettingItemView(Context context) {
         this(context, null, 0);
@@ -42,6 +46,14 @@ public class SettingItemView  extends RelativeLayout{
         super(context, attrs, defStyleAttr);
         initView(context);
         getCusAttrs(context, attrs);
+        rootLayout.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (onItemClick != null){
+                    onItemClick.onClick();
+                }
+            }
+        });
     }
 
     /**
@@ -50,9 +62,11 @@ public class SettingItemView  extends RelativeLayout{
      */
     private void initView(Context context) {
         mView = View.inflate(context, R.layout.view_item_setting, this);
+        rootLayout = mView.findViewById(R.id.root_layout);
         leftImageIcon = (ImageView) mView.findViewById(R.id.setting_item_left_icon);
         textView = (TextView) mView.findViewById(R.id.setting_item_text);
         dividerView = mView.findViewById(R.id.setting_item_divide);
+        rightImageIcon = (ImageView) mView.findViewById(R.id.setting_item_right_icon);
     }
 
     /**
@@ -81,9 +95,25 @@ public class SettingItemView  extends RelativeLayout{
                         dividerView.setVisibility(GONE);
                     }
                     break;
+                case R.styleable.SettingItemView_isShow_arrow:
+                    isShowArrow = typedArray.getBoolean(array, true);
+                    if (!isShowArrow){
+                        rightImageIcon.setVisibility(GONE);
+                    }
+                    break;
             }
         }
         typedArray.recycle();
+    }
 
+    public void setOnItemClick(OnItemClick onItemClick){
+        this.onItemClick = onItemClick;
+    }
+
+    /**
+     * 感觉这个接口定义得有点多余，也许为了后面的拓展？？？
+     */
+    public interface OnItemClick{
+        void onClick();
     }
 }

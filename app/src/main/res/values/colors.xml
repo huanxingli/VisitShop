@@ -18,5 +18,8 @@
 
     <!-- SettingFragment -->
     <color name="item_divide">#99999999</color>
+    <color name="user_name_text">#110d0a</color>
+    <color name="setting_color_bg">#f2f2f2</color>
+
 
 </resources>

@@ -13,4 +13,12 @@
     <string name="tab_train">培训</string>
     <string name="tab_me">个人中心</string>
 
+    <!-- Setting item -->
+    <string name="setting_item_me">个人资料</string>
+    <string name="setting_item_clear">清除缓存</string>
+    <string name="setting_item_idea">意见反馈</string>
+    <string name="setting_item_about">关于APP</string>
+    <string name="setting_item_check">新版本检测</string>
+    <string name="setting_item_exit">退出应用</string>
+
 </resources>
